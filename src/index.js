@@ -3,12 +3,21 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import ItemDetailContainer from './components/shop/ItemDetailContainer';
+import ItemListContainer from './components/shop/ItemListContainer';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  // <React.StrictMode>
+  <BrowserRouter>
+    <NavBar/>
+    <Routes>
+      <Route path='/shop' element={<ItemListContainer/>}/>
+      <Route path='/shop/item/:slug' element={<ItemDetailContainer/>}/>
+    </Routes>
+    <Footer/>
+  </BrowserRouter>
+  // </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
