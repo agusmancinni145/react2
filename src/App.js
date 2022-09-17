@@ -1,5 +1,11 @@
 import { useEffect, useState } from 'react';
 import './App.css';
+import Card from './components/Card';
+import InputNoVowels from './components/InputNoVowels';
+import ItemListContainer from './components/ItemListContainer';
+import NavBar from './components/NavBar';
+import Saludo from './components/Saludo';
+import DarkmodeContext from './context/Darkmode';
 
 function App(props) {
 
@@ -53,12 +59,20 @@ function App(props) {
 
   return (
     <div className='container'>
+      <DarkmodeContext.Provider value={true}>
+        <InputNoVowels/>
+
         <div className='my-5'>
           <strong>Contador: {counter}</strong>
         </div>
         <button onClick={handleClick} className='btn my-5'>Click</button>
 
         {products.map( p => <div className='bg-orange-500 my-2'>{p}</div> )}
+
+        <ItemListContainer greeting={'Saludos'}/>  
+        <Saludo name='Miguel' lastname='Gonzalez'/>
+        <Card/>
+      </DarkmodeContext.Provider>
     </div>
   );
 }

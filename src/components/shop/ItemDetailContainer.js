@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import { useParams } from "react-router-dom"
 import ItemDetail from "./ItemDetail"
 import products from "./productsData"
 
@@ -38,7 +39,7 @@ const ItemDetailContainer = () => {
 
   useEffect(() => {
     getItem().then( data => {
-        //( console.log(slug)
+        //( console.log(slug);
         if (data) {
             setItem(data)
         }
