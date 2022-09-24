@@ -4,7 +4,7 @@ const products = [
         name: 'Apple iPhone',
         slug: 'iphone',
         price: 1200,
-        img: '',
+        img: 'imagen<',
         description: 'este es un iPhone'
     },
     {
@@ -12,7 +12,7 @@ const products = [
         name: 'Samsung Galaxy',
         slug: 'galaxy',
         price: 1000,
-        img: '',
+        img: 'imagen2',
         description: 'este es un Galaxy'
     },
     {
@@ -20,7 +20,7 @@ const products = [
         name: 'Xiaomi Note',
         slug: 'note',
         price: 300,
-        img: '',
+        img: 'imagen3',
         description: 'este es un Xiaomi'
     }
 ]
